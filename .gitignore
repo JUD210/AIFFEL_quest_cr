@@ -1,3 +1,7 @@
+# hide tmp(_), secure(__) files
+_*
+___*
+
 ########################################
 # Mac OS finder
 .DS_Store
