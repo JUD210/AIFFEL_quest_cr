@@ -1,14 +1,14 @@
 ####### MEMO #######
 
-# @@Todo [OK] 비슷한 출력 반복하는 부분들 모듈화하기
+# Todo [OK] 비슷한 출력 반복하는 부분들 모듈화하기
 
-# @@Review [OK] 문제로 주어진 조건 확인해보기
+# Review [OK] 문제로 주어진 조건 확인해보기
 # [OK] 평가 1. Kiosk 클래스를 생성하고, 주문, 추가 주문 메서드를 적절하게 구현할 수 있다.
 #  ㄴ 각각의 메서드가 에러 없이, 정상적으로 동작하였다.
 # [OK] 평가 2. 지불, 주문표 작성 메서드를 적절하게 구현할 수 있다.
 #  ㄴ 각각의 메서드가 에러 없이, 정상적으로 동작하였다.
 
-# @@Debug [OK] 제출하기 전에 ipynb 돌려보기
+# Debug [OK] 제출하기 전에 ipynb 돌려보기
 # 주의점 1
 #   .py와 다르게, .ipynb에서는 f" " 안에서 translate(" ", "")를 사용하면 에러가 발생한다.
 # f" " 범위 내에서는 replace(' ', '')와 같이 "를 쓰지 않도록 주의하자.
@@ -83,6 +83,9 @@ class Kiosk:
         while n < 1 or len(self.menu) < n:
             try:
                 n = int(input("주문할 음료의 번호를 입력하세요 : "))
+                if n < 1 or len(self.menu) < n:
+                    print("없는 메뉴입니다. 다시 주문해 주세요.\n")
+
             except ValueError:
                 print("유효한 숫자를 입력해주세요.\n")
                 continue
