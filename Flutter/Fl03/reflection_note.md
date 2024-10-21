@@ -18,14 +18,14 @@
 
 ### JAVA / Gradle 버전 이슈
 
-![alt text](additional/log_fix_java_gradle_version_issue 01.png)
+![alt text](<additional/log_fix_java_gradle_version_issue 01.png>)
 
 해결 방법
 
 1. <https://github.com/flutter/flutter/issues/156304>
 2. `sudo rm -rf /Library/Java/JavaVirtualMachines/`
 3. `brew install openjdk@21`
-4. ![alt text](additional/log_fix_java_gradle_version_issue 02.png)
+4. ![alt text](<additional/log_fix_java_gradle_version_issue 02.png>)
    - 나는 2번까지만 진행했는데도 해결되었다.
 
 ## 고민 기록
@@ -42,6 +42,10 @@
 
 ![alt text](additional/log_font_awesome_icons_01.png)
 ![alt text](additional/log_font_awesome_icons_02.png)
+
+### `StatelessWidget` vs `StatefulWidget`
+
+- 퀘스트의 내용에서는 '상태'를 따로 유지가 필요 없기 때문에, StatelessWidget을 사용했음.
 
 ## 주절주절
 
