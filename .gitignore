@@ -6,6 +6,9 @@ __*
 pubspec*
 .dart_tool
 
+# Model
+*.h5
+
 ########################################
 # Mac OS finder
 .DS_Store
