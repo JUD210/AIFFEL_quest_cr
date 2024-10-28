@@ -2,6 +2,10 @@
 _*
 __*
 
+# Flutter/Dart related
+pubspec*
+.dart_tool
+
 ########################################
 # Mac OS finder
 .DS_Store
