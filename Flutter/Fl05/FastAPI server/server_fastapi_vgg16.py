@@ -50,15 +50,15 @@ async def sample_prediction():
 async def predict_class(image_path = './sample_data/jellyfish.jpg'):
     try:
         result = await vgg16_prediction_model.prediction_model(vgg16_model, image_path)
-        predicted_class = result["predicted_label"]
+        predicted_class = result["predicted_class"]
         logger.info("Prediction class was requested and done")
-        return {"predicted_label": predicted_class}
+        return {"predicted_class": predicted_class}
     except Exception as e:
         logger.error("Prediction failed: %s", e)
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
-@app.get('/predict_probability')
-async def predict_probability(image_path = './sample_data/jellyfish.jpg'):
+@app.get('/predict_score')
+async def predict_score(image_path = './sample_data/jellyfish.jpg'):
     try:
         result = await vgg16_prediction_model.prediction_model(vgg16_model, image_path)
         prediction_score = result["prediction_score"]

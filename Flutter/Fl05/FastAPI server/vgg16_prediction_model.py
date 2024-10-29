@@ -28,5 +28,6 @@ async def prediction_model(model, img_path):
     y_preds = model.predict(pre_processed)
     np.set_printoptions(suppress=True, precision=5)
     result = decode_predictions(y_preds, top=1)
-    result = {"predicted_label": str(result[0][0][1]), "prediction_score": str(result[0][0][2])}
+    print(f"result: {result}")
+    result = {"predicted_class": str(result[0][0][1]), "prediction_score": str(result[0][0][2])}
     return result
